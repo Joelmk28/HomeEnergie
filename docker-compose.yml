@@ -4,9 +4,10 @@ services:
     container_name: mysql-home-energie
     restart: always
     environment:
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: home_energy_tracker
     ports:
-      - "3307:3307"
+      - "3307:3306"
     volumes:
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
       - db-data:/var/lib/mmysql
