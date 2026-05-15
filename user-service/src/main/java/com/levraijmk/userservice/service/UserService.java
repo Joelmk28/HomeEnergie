@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public UserDto createUser(UserDto userDto){
+
         log.info("Creation de l'utilisateur : {}",userDto);
         return userDto;
     }
